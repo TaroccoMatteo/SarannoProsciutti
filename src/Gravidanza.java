@@ -1,15 +1,15 @@
 import java.util.Date;
 
-public class Gravidanza {
+public class Gravidanza extends Coppia {
 
-    private Date fecondazione;
-    private Date parto;
-    private int natiVivi;
-    private int natiMorti;
-    private Date svezzamento;
-    private Gravidanza prossimo;
+    protected Date fecondazione;
+    protected Date parto;
+    protected int natiVivi;
+    protected int natiMorti;
+    protected Date svezzamento;
+    protected Gravidanza prossimo;
 
-    public Date dataParto() {
+    public Date getParto() {
         return parto;
     }
 

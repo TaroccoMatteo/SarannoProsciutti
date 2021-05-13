@@ -1,20 +1,20 @@
-public class ValutaCoppia {
-    private int Fecondazioni;
+public class ValutaCoppia extends Coppia {
+
+    private int fecondazioni;
     private int suinetti;
-    
 
-    //costruttori
-    public ValutaCoppia(){
-        this.Fecondazioni = 0;
-        this.suinetti = 0;
+    public ValutaCoppia(Gravidanza gravidanza) {
+        super(gravidanza.scrofa, gravidanza.verro);
+        suinetti = gravidanza.natiVivi;
+        fecondazioni = gravidanza.scrofa.numeroParti;
+    }
 
+    public double punteggio() {
+        return 0;
     }
-    public ValutaCoppia(int Fecondazioni, int suinetti){
-        this.Fecondazioni = Fecondazioni;
-        this.suinetti = suinetti;
+
+    public Coppia getProssima() {
+        return prossimo;
     }
-    public ValutaCoppia(Coppia c){
-        this.Fecondazioni = c.getFecondazioni;
-        this.suinetti = c.getSuinetti;
-    }
+
 }

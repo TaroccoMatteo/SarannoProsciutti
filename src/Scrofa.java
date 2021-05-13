@@ -3,10 +3,10 @@ import java.util.Date;
 
 public class Scrofa extends Maiale {
 
-    private final ArrayList<Date> parti;
-    private int numeroParti;
-    private int numeroSvezzati;
-    private double punteggio;
+    protected final ArrayList<Date> parti;
+    protected int numeroParti;
+    protected int numeroSvezzati;
+    protected double punteggio;
 
     public Scrofa(Razza razza, Date nascita) {
         super(razza, nascita);
@@ -14,7 +14,7 @@ public class Scrofa extends Maiale {
     }
 
     public void aggiungiGravidanza(Gravidanza gravidanza) {
-        parti.add(gravidanza.dataParto());
+        parti.add(gravidanza.getParto());
     }
 
     public double punteggio() {

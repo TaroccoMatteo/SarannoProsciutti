@@ -1,12 +1,20 @@
 public class Coppia {
 
-    private Scrofa scrofa;
-    private Verro verro;
-    private Coppia prossimo;
+    protected final Scrofa scrofa;
+    protected final Verro verro;
+    protected Coppia prossimo;
 
     public Coppia(Scrofa scrofa, Verro verro) {
         this.scrofa = scrofa;
         this.verro = verro;
+    }
+
+    public Scrofa getScrofa() {
+        return scrofa;
+    }
+
+    public Verro getVerro() {
+        return verro;
     }
 
 }
