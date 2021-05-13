@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class IpotesiFecondazione {
     private Date data;
     private ValutaCoppia coppia;
@@ -15,7 +17,7 @@ public class IpotesiFecondazione {
         this.coppia = coppia;
         this.prossima = prossima;
     }
-    public IpotesiFecondazione(Ipotesi i){
+    public IpotesiFecondazione(IpotesiFecondazione i){
         this.data = i.getData;
         this.coppia = i.getCoppia;
         this.prossima = i.getProssima;
