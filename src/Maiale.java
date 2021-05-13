@@ -14,8 +14,17 @@ public abstract class Maiale {
         codice = CODICE++;
     }
 
-    public int codice() {
-        return codice;
+    public int getCodice() {
+        return(codice);
     }
 
+    public Razza getRazza() {
+        return(razza);
+    }
+
+    public Date getNascita() {
+        return(nascita);
+    }
+
+    //fine carriera??
 }
