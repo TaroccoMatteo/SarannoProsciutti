@@ -19,7 +19,7 @@ public class IpotesiFecondazione {
     }
     public IpotesiFecondazione(IpotesiFecondazione i){
         this.data = i.getData;
-        this.coppia = i.getCoppia;
+        //this.coppia = i.getCoppia;
         this.prossima = i.getProssima;
     }
 }
