@@ -1,7 +1,7 @@
 public class Coppia {
 
     protected final Scrofa scrofa;
-    protected final Verro verro;
+    protected Verro verro;
     protected Coppia prossimo;
 
     public Coppia(Scrofa scrofa, Verro verro) {

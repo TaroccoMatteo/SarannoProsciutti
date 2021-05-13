@@ -1,7 +1,7 @@
 public class ValutaCoppia extends Coppia {
 
-    private int fecondazioni;
-    private int suinetti;
+    private final int fecondazioni;
+    private final int suinetti;
 
     public ValutaCoppia(Gravidanza gravidanza) {
         super(gravidanza.scrofa, gravidanza.verro);
@@ -9,8 +9,8 @@ public class ValutaCoppia extends Coppia {
         fecondazioni = gravidanza.scrofa.numeroParti;
     }
 
-    public double punteggio() {
-        return 0;
+    public double getPunteggio() {
+        return suinetti * fecondazioni;
     }
 
     public Coppia getProssima() {
