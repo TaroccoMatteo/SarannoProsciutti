@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.Date;
 
 public abstract class Maiale {
@@ -8,6 +9,7 @@ public abstract class Maiale {
     protected final Razza razza;
     protected final Date nascita;
     protected Maiale prossimo;
+    private Date fineCarriera;
 
     public Maiale(Razza razza, Date nascita) {
         this.razza = razza;
@@ -29,6 +31,10 @@ public abstract class Maiale {
 
     public Date fineCariera() {
         //Credo intenda fine cariera riproduttiva (5 anni dopo la nascita)
+        Calendar c = Calendar.getInstance();
+        c.setTime(nascita);
+        c.add(Calendar.YEAR, 5);
+        fineCarriera = c.getTime();
         return null;
     }
 
