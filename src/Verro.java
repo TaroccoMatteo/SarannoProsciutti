@@ -6,4 +6,5 @@ public class Verro extends Maiale {
         super(razza, nascita);
     }
 
+
 }

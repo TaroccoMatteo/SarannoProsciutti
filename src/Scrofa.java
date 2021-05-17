@@ -22,5 +22,9 @@ public class Scrofa extends Maiale {
             return (numeroParti+numeroSvezzati)*(/*METTERE NUMERO GIORNI TRA PRIMO E ULTIMO PARTO*/766*numeroNati);
         throw new Exception();
     }
+    public Verro scegliVerro(Maiale maiale,Coppia coppia,IpotesiFecondazione ipotesiFecondazione){
+
+
+    }
 
 }
