@@ -3,18 +3,18 @@ import java.util.Date;
 
 public class Scrofa extends Maiale {
 
-    protected final ArrayList<Gravidanza> parti;
+    protected final ArrayList<Gravidanza> gravidanze;
     protected int numeroParti;
     protected int numeroNati;
     protected int numeroSvezzati;
 
     public Scrofa(Razza razza, Date nascita) {
         super(razza, nascita);
-        parti = new ArrayList<>();
+        gravidanze = new ArrayList<>();
     }
 
     public void aggiungiGravidanza(Gravidanza gravidanza) {
-        parti.add(gravidanza);
+        gravidanze.add(gravidanza);
     }
 
     public double getPunteggio() throws Exception {
@@ -22,9 +22,9 @@ public class Scrofa extends Maiale {
             return (numeroParti+numeroSvezzati)*(/*METTERE NUMERO GIORNI TRA PRIMO E ULTIMO PARTO*/766*numeroNati);
         throw new Exception();
     }
-    public Verro scegliVerro(Maiale maiale,Coppia coppia,IpotesiFecondazione ipotesiFecondazione){
 
-
+    public Coppia scegliVerro(Verro verro){
+        return new Coppia(this, verro);
     }
 
 }
