@@ -24,4 +24,12 @@ public class Allevamento {
         coppie.add(coppia);
     }
 
+    @Override
+    public String toString() {
+        return "Allevamento{" +
+                "maiali=" + maiali +
+                ", gravidanze=" + gravidanze +
+                ", coppie=" + coppie +
+                '}';
+    }
 }

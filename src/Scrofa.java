@@ -27,4 +27,17 @@ public class Scrofa extends Maiale {
         return new Coppia(this, verro);
     }
 
+    @Override
+    public String toString() {
+        return "Scrofa{" +
+                "codice=" + codice +
+                ", razza=" + razza +
+                ", nascita=" + nascita +
+                ", prossimo=" + prossimo +
+                ", gravidanze=" + gravidanze +
+                ", numeroParti=" + numeroParti +
+                ", numeroNati=" + numeroNati +
+                ", numeroSvezzati=" + numeroSvezzati +
+                '}';
+    }
 }

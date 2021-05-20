@@ -13,7 +13,7 @@ public class Main {
             System.out.println("1 --> aggiungi maiale");
             menu = inp.nextInt();
         }while(menu != 0 && menu != 1 && menu != 2 && menu != 3 && menu != 4);
-        return menu
+        return (menu);
     }
 
     public static void main(String[] args) {
@@ -21,6 +21,9 @@ public class Main {
         int menu;
         menu = menu();
         int select;
+        //se non esiste l'allevamento nel csv viene creato
+        Allevamento A1 = new Allevamento();
+
         if(menu == 1){
 
             do{
@@ -28,28 +31,29 @@ public class Main {
                 select = inp.nextInt();
             }while(select != 1 && select != 2);
             if(select == 1){
+                inp.nextLine();
                 String razza;
                 do{
-                    System.out.println("Inserire la razza:");
+                    System.out.println("Inserire la razza(LW/L/D):");
                     razza = inp.nextLine();
-                }while(razza != "LW" && razza != "L" && razza != "D");
-                /*
+                    System.out.println(razza);
+                }while(!razza.equals("LW") && !razza.equals("L") && !razza.equals("D"));
+
                 String d_nasc = "05/09/2020";
-                try {
-                    this.data_nasc = new
-                            SimpleDateFormat("dd/MM/yyyy").parse(d_nasc);
-                } catch (ParseException ex) {
-                    this.data_nasc= new Date(0);//1 1 1970
-                }*/
-                if(razza == "LW"){
-                    Scrofa s1 = new Scrofa(Razza.LW,);
+                //check variabile
+
+                if(razza.equals("LW")){
+                    System.out.println("salve");
+                    A1.addMaiale(new Scrofa(Razza.LW,new Date(0)));
                 }
-                if(razza == "L"){
-                    Scrofa s1 = new Scrofa(Razza.L,"05/09/2021");
+                if(razza.equals("L")){
+                    A1.addMaiale(new Scrofa(Razza.L,new Date(0)));
                 }
-                if(razza == "D"){
-                    Scrofa s1 = new Scrofa(Razza.D,"05/09/2021");
+                if(razza.equals("D")){
+                    A1.addMaiale(new Scrofa(Razza.D,new Date(0)));
                 }
+
+                System.out.println(A1.toString());
 
             }
 
