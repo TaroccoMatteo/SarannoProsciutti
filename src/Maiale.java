@@ -29,8 +29,7 @@ public abstract class Maiale {
         return nascita;
     }
 
-    public Date fineCariera() {
-        //Credo intenda fine cariera riproduttiva (5 anni dopo la nascita)
+    public Date fineCariera(){
         Calendar c = Calendar.getInstance();
         c.setTime(nascita);
         c.add(Calendar.YEAR, 5);

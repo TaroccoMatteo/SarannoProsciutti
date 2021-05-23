@@ -1,12 +1,13 @@
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Gravidanza extends Coppia {
 
-    protected Date fecondazione;
-    protected Date parto;
+    protected GregorianCalendar fecondazione;
+    protected GregorianCalendar parto;
     protected int natiVivi;
     protected int natiMorti;
-    protected Date svezzamento;
+    protected GregorianCalendar svezzamento;
     protected int svezzati;
     private Gravidanza prossimo;
 
@@ -14,11 +15,11 @@ public class Gravidanza extends Coppia {
         super(scrofa, verro);
     }
 
-    public Date getFecondazione() {
+    public GregorianCalendar getFecondazione() {
         return fecondazione;
     }
 
-    public Date getParto() {
+    public GregorianCalendar getParto() {
         return parto;
     }
 
@@ -30,7 +31,7 @@ public class Gravidanza extends Coppia {
         return natiMorti;
     }
 
-    public Date getSvezzamento() {
+    public GregorianCalendar getSvezzamento() {
         return svezzamento;
     }
 
