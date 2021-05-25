@@ -29,4 +29,8 @@ public class OurDate {
         double diffGiorni = diff2 / 86400000; //conversione da millisecondi a giorni
         return diffGiorni;
     }
+
+    public double differenzaGiorni(){
+        return differenzaGiorni(dataUno, dataDue);
+    }
 }

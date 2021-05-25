@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Scrofa extends Maiale {
 
@@ -18,8 +19,12 @@ public class Scrofa extends Maiale {
     }
 
     public double getPunteggio() throws Exception {
-        if(numeroParti >= 2)
-            return (numeroParti+numeroSvezzati)*(/*METTERE NUMERO GIORNI TRA PRIMO E ULTIMO PARTO*/766*numeroNati);
+        if(numeroParti >= 2) {
+            GregorianCalendar data1 = gravidanze.get(gravidanze.size() - 1).parto;
+            GregorianCalendar data2 = gravidanze.get(gravidanze.size() - 2).parto;
+            OurDate diff = new OurDate(data1, data2);
+            return (numeroParti + numeroSvezzati) * (diff.differenzaGiorni() / 766 * numeroNati);
+        }
         throw new Exception();
     }
 
@@ -27,17 +32,4 @@ public class Scrofa extends Maiale {
         return new Coppia(this, verro);
     }
 
-    @Override
-    public String toString() {
-        return "Scrofa{" +
-                "codice=" + codice +
-                ", razza=" + razza +
-                ", nascita=" + nascita +
-                ", prossimo=" + prossimo +
-                ", gravidanze=" + gravidanze +
-                ", numeroParti=" + numeroParti +
-                ", numeroNati=" + numeroNati +
-                ", numeroSvezzati=" + numeroSvezzati +
-                '}';
-    }
 }
