@@ -24,12 +24,19 @@ public class Allevamento {
         coppie.add(coppia);
     }
 
+    public Maiale find(int ID){
+        for(int i=0; i<maiali.size(); i++){
+
+        }
+
+    }
+
     @Override
     public String toString() {
         return "Allevamento{" +
-                "maiali=" + maiali +
-                ", gravidanze=" + gravidanze +
-                ", coppie=" + coppie +
+                "maiali =" + maiali +
+                ", gravidanze =" + gravidanze +
+                ", coppie =" + coppie +
                 '}';
     }
 }
