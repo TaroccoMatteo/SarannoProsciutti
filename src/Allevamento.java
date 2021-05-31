@@ -25,10 +25,10 @@ public class Allevamento {
     }
 
     public Maiale find(int ID){
-        for(int i=0; i<maiali.size(); i++){
-
+        for(Maiale m : maiali) {
+            if(m.getCodice() == ID) return m;
         }
-
+        return null;
     }
 
     @Override

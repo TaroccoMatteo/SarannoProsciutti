@@ -9,6 +9,11 @@ public class Coppia {
         this.verro = verro;
     }
 
+    public Coppia(Verro verro, Scrofa scrofa) {
+        this.scrofa = scrofa;
+        this.verro = verro;
+    }
+
     public Scrofa getScrofa() {
         return scrofa;
     }
